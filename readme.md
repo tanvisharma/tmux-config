@@ -1,5 +1,32 @@
 Tmux Configuration
 =====================
+
+Important config settings
+```set -g default-shell /usr/bin/zsh
+
+set -g default-command "zsh -l"
+
+#Better terminal features
+set -g mouse on
+
+set -g history-limit 50000
+
+#Truecolor support (many modern terminals)
+set -ga terminal-overrides ",*:Tc"
+
+#Vi-style keys in copy mode (optional)
+set -g mode-keys vi
+
+#Enable middle click paste
+bind-key -T root MouseDown2Pane run-shell -b "xclip -o | tmux load-buffer - && tmux paste-buffer"
+```
+
+
+
+
+
+
+
 Tmux configuration, that supercharges your [tmux](https://tmux.github.io/) and builds cozy and cool terminal environment.
 
 ![intro](https://user-images.githubusercontent.com/768858/33152741-ec5f1270-cfe6-11e7-9570-6d17330a83aa.gif)
