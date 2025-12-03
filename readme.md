@@ -1,7 +1,12 @@
 Tmux Configuration
 =====================
 
-Important config settings
+`tmux new -d -s <session-name>`
+
+`tmux attach -t <session-name>`
+
+
+## Important config settings
 ```set -g default-shell /usr/bin/zsh
 
 set -g default-command "zsh -l"
@@ -21,7 +26,7 @@ set -g mode-keys vi
 bind-key -T root MouseDown2Pane run-shell -b "xclip -o | tmux load-buffer - && tmux paste-buffer"
 ```
 
-
+## Original README
 
 
 
